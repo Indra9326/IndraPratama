@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir Kerja Sama</title>
+  <style>
+    body {
+      background-color: #2e2e2e;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #444;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      background-color: #5c5cff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4a4acf;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <form id="formulir">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <label for="tanggal">Tanggal Pelaksanaan:</label>
+    <input type="date" id="tanggal" name="tanggal" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+    document.getElementById("formulir").addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah form terkirim ke server
+    alert("Formulir berhasil dikirim!");
+  });
+</script>
+
+</body>
+</html>
